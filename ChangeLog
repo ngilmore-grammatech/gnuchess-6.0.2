@@ -1,10 +1,57 @@
+2013-03-11  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/main.cc: Copyright year updated to 2013.
+
+2013-03-10  Antonio Ceballos  <aceballos@gmail.com>
+
+	* configure.ac: explicit package name in AC_INIT.
+
+2013-03-10  Antonio Ceballos  <aceballos@gmail.com>
+
+	* configure.ac: version 6.0.3
+	* NEWS: changes in version 6.0.3
+	* doc/gnuchess.texi: date
+	* doc/version.texi: version
+
+
+2013-03-10  Antonio Ceballos  <aceballos@gmail.com>
+
+	* configure.ac: replace AM_CONFIG_HEADER by AC_CONFIG_HEADERS;
+	modernize AM_INIT_AUTOMAKE.
+
+2013-03-10  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/frontend/cmd.c: if in manual mode, keep it after undo.
+	* src/main.cc: sleep 100us in main loop to avoid 100% CPU.
+
+2012-08-29  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/adapter/pgn.cpp: Ignore rest of line instead of
+	crashing when unexpected token is found in game line.
+	This way, book_1.01.pgn can be successfully read.
+
+2012-08-29  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/frontend/output.c: removed unused code.
+	* src/frontend/genmove.c: removed unused code.
+	* src/frontend/move.c: removed unused code.
+	* src/frontend/atak.c: removed unused code.
+	* src/frontend/solve.c: removed unused code.
+	* src/frontend/common.h: removed unused code.
+	* src/main.cc: removed unused code.
+	* TODO: added some tasks
+
+2012-03-05  Antonio Ceballos  <aceballos@gmail.com>
+
+	* INSTALL: Remove reference to inexistent doc/README.
+
 2012-03-04  Antonio Ceballos  <aceballos@gmail.com>
 
 	Idea from Kamil Rytarowski <n54@gmx.com>
 	* src/adapter/main.cpp: Open book file in read-only or read-write
-	mode depending on BookLearn option false or ture, respectively.
+	mode depending on BookLearn option false or true, respectively.
 	* src/adapter/adapter.cpp: Open book file in read-only or read-write
-	mode depending on BookLearn option false or ture, respectively.
+	mode depending on BookLearn option false or true, respectively.
 	* src/adapter/book.h: book_open() can open a book file in
 	read-only or read-write mode.
 	* src/adapter/book.cpp: book_open() can open a book file in
@@ -156,7 +203,7 @@
 	* src/frontend/engine.c: comment out extra output write.
 	* src/adapter/adapter.cpp: remove debug trace.
 
-Copyright (C) 2001-2012 Free Software Foundation, Inc.
+Copyright (C) 2001-2013 Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
