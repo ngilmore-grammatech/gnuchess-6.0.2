@@ -1,6 +1,6 @@
 /* GNU Chess 6 - main.cc - entry point
 
-   Copyright (c) 2001-2012 Free Software Foundation, Inc.
+   Copyright (c) 2001-2013 Free Software Foundation, Inc.
 
    GNU Chess is based on the two research programs 
    Cobalt by Chua Kong-Sian and Gazebo by Stuart Cracraft.
@@ -76,8 +76,6 @@ HashType HashKey;
 HashType PawnHashKey;
 int Game50;
 unsigned long GenCnt;
-unsigned long NodeCnt;
-unsigned long QuiesCnt;
 char SANmv[SANSZ];
 char id[32];
 char solution[64];
@@ -359,7 +357,7 @@ int main (int argc, char *argv[])
   
   /* Startup output */
   if ( !( flags & XBOARD ) && ( !opt_quiet ) && ( !opt_uci) ) {
-    printf( "Copyright (C) 2012 Free Software Foundation, Inc.\n" );
+    printf( "Copyright (C) 2013 Free Software Foundation, Inc.\n" );
     printf( "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n" );
     printf( "This is free software: you are free to change and redistribute it.\n" );
     printf( "There is NO WARRANTY, to the extent permitted by law.\n" );
@@ -474,6 +472,8 @@ int main (int argc, char *argv[])
       ReadFromUser();
       /* Check if engine input ready for reading. If so, store it in a buffer. */
       ReadFromEngine();
+
+      usleep(100);
     }
   }
   
